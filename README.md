@@ -11,7 +11,7 @@ Les fichiers concernant l'expression de besoin, l'analyse et conception se trouv
 La solution permet notamment:
 
 - Gestion clientèle;
-- Gestion des ventes de chambres/appartements;
+- Gestion des ventes de chambres/appartements/articles;
 - Gestion des opérations de caisse;
 - Le reporting.
 
