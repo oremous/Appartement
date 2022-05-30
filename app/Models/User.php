@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Role;
+use App\Models\Paiement;
+use App\Models\Permission;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -18,7 +21,13 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'nom',
+        'prenom',
+        'sexe',
+        'pieceIdentite',
+        'numeroPieceIdentite',
+        'telephone1',
+        'telephone2',
         'email',
         'password',
     ];
@@ -52,5 +61,17 @@ class User extends Authenticatable
 
     public function permissions(){
         return $this->belongsToMany(Permission::class, "user_permission", "user_id", "permission_id");
+    }
+
+    public function hasRole($role){
+        return $this->roles()->where("nom", $role)->first() !== null;
+    }
+
+    public function hasAnyRole($role){
+        return $this->roles()->whereIn("nom", $roles)->first() !== null;
+    }
+
+    public function getAllRoleNamesAttribute(){
+        return $this->roles->implode("nom", ' | ');
     }
 }
