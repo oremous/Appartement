@@ -2,7 +2,7 @@
     <div class="col-md-6">
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title"><i class="fas fa-user-plus fa-2x"></i> Formulaire d'un nouvel utilisateur</h3>
+                <h3 class="card-title"><i class="fas fa-user-plus fa-2x"></i> Formulaire d'un nouveau client</h3>
             </div>
             <form role="form" wire:submit.prevent="addUser()">
                 <div class="card-body">
@@ -109,14 +109,14 @@
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Enregistrer</button>
-                    <button type="button" wire:click="goToListUser()" class="btn btn-danger">Retourner a la liste des utilisateurs</button>
+                    <button type="button" wire:click="goToListUser()" class="btn btn-danger">Retourner à la liste des clients</button>
                 </div>
             </form>                    
         </div>
     </div>
 </div>
 
-<script>
+{{-- <script>
     window.addEventListener("showSuccessMessage", event=>{
         Swal.fire({
             position: 'top-end',
@@ -127,4 +127,4 @@
             timer: 3000
         })
     })
-</script>
+</script> --}}

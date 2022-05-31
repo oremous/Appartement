@@ -2,6 +2,7 @@
 
 use App\Models\Article;
 use App\Models\TypeArticle;
+use App\Http\Livewire\TypeApt;
 use App\Http\Livewire\Utilisateurs;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,7 @@ Route::group([
     'as' => 'admin.'
 ], function(){
 
+    // Appartements
     Route::group([
         "prefix" => "appartements",
         'as' => 'appartements.'

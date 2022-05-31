@@ -52,7 +52,7 @@
               href="{{ route('admin.appartements.users.index') }}"
               class="nav-link {{ setMenuActive('admin.appartements.users.index') }}">
                 <i class=" nav-icon fas fa-users-cog"></i>
-                <p>Utilisateurs</p>
+                <p>Clients</p>
               </a>
             </li>
             <li class="nav-item">
@@ -74,7 +74,7 @@
           </a>
           <ul class="nav nav-treeview">
           <li class="nav-item">
-              <a href="#" class="nav-link ">
+              <a href="" class="nav-link">
                 <i class="nav-icon far fa-circle"></i>
                 <p>Type d'appartements</p>
               </a>
