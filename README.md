@@ -2,7 +2,7 @@
 
 ## A propos de ce projet
 
-Ce projet a été conçu dans le cadre de la formation Laravel 8 & Livewire dispensée par Orémus Odj (un information en GL).
+Ce projet a été conçu dans le cadre de la formation Laravel 8 & Livewire dispensée par Orémus Odj (un informaticien en Génie Logiciel).
 Pour mieux comprendre l'expression de besoin et comment il a été implémenté, prière de vous rendre sur 
 le GitHub suivant le lien [Oremous](https://github.com/oremous) :-) .
 
